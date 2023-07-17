@@ -115,9 +115,9 @@ salary = 2400
 if points == 0.0:
     print( f"Unacceptable level, your salary is: {salary}" )
 elif points == 0.4:
-    print( f"Acceptable level, your salary is: {salary * points}" )
-elif points > 0.6:
-    print( f"Meritorious level, your salary is: {salary * points}" )
+    print( f"Acceptable level, your salary is: {salary * points + salary}" )
+elif points >= 0.6:
+    print( f"Meritorious level, your salary is: {salary * points +salary}" )
 
 
 """
@@ -131,7 +131,7 @@ user_years_old = int( input( "What is your age?: " ) )
 
 if user_years_old < 4:
     print( "Your entrance is free" )
-elif user_years_old < 18:
+elif user_years_old <= 18:
     print( "Your entrance costs: 5$" )
 elif user_years_old > 18:
     print( "Your entrance costs: 10$" )
@@ -156,12 +156,12 @@ pizza = [ "Bell Pepper", "Tofu" ]
 vegetarian_pizza = [ "Pepperoni", "Ham", "Salmon" ]
 
 if type_of_pizza.lower() == "y":
-    print( "Select Ingredient: Bell Pepper, Tofu" )
-    selection = int(input("1 or 2: "))
-    print( f"Your vegetarian pizza has: {vegetarian_pizza[selection-1]}, mozzarella and tomato. enjoyment." )
-else: 
     print( "Select Ingredient: Pepperoni, Ham, Salmon" )
     selection = int(input("1, 2 or 3: "))
+    print( f"Your vegetarian pizza has: {vegetarian_pizza[selection-1]}, mozzarella and tomato. enjoyment." )
+else: 
+    print( "Select Ingredient: Bell Pepper, Tofu" ) 
+    selection = int(input("1 or 2: "))
     print( f"Your pizza has: {pizza[selection-1]}, mozzarella and tomato. enjoyment." )
     
 """
